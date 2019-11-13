@@ -12,6 +12,9 @@ import java.io.ObjectInputStream;
 public class MemberReader {
 	
 	
+	
+	
+	
 	public static ArrayList<Member> readMembersFromTextFile(String filename) {
 		try {
             Scanner fsc = new Scanner(new File(filename)); 
@@ -21,8 +24,10 @@ public class MemberReader {
             //Storage
             String [] parts;
             ArrayList<Member> members = new ArrayList<Member>();
-
-            while (fsc.hasNextLine()) {
+           
+           
+     	   
+     	   while (fsc.hasNextLine()) {
                 line = fsc.nextLine().trim();
                 //Splits the line
                 parts = line.split("\t");

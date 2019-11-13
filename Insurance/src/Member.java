@@ -1,10 +1,10 @@
+import java.io.Serializable;
 import java.util.ArrayList;
  
-public class Member {
+public class Member implements Serializable {
     private String firstName,lastName, cancer, diabetes, alzheimers ;
     private int age, height, weight, bpSyst, bpDias;
     
-    //private ArrayList<Integer> grades;
     
     public String getFirstName() {
         return firstName;
@@ -66,22 +66,8 @@ public class Member {
     public void setBpSyst(int bpSyst) {
         this.bpSyst = bpSyst;
     }
-    /*public ArrayList<Integer> getGrades() {
-        return grades;
-    }
-    public void setGrades(ArrayList<Integer> grades) {
-        this.grades = grades;
-    }*/
-   
-    /*
-    public void setGrade(String gradeString) {
-        gradeString = gradeString.trim();
-        String[] parts = gradeString.split(" ");
-        grades = new ArrayList<Integer>();
-        for (String part : parts) {
-            grades.add(Integer.parseInt(part));
-        }
-    }*/
+    
+
     public Member() {
     	 firstName ="";
     	 lastName="";
@@ -112,16 +98,7 @@ public class Member {
         
    
     }
-   /*
-    public String getGradesAsString() {
-        String result = "";
-        for (int grade : grades) {
-            result = result + grade + " ";
-        }
-        result = result.trim();  // get rid of extra space
-        return result;
-    }
-    */
+  
     @Override
     public String toString() {
         return String.format(

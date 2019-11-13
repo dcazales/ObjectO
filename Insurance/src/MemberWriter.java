@@ -39,7 +39,7 @@ public class MemberWriter {
 		        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename));
 		          oos.writeObject(members);
 		          oos.close();
-		           return true;
+		           return true; 
 		        } catch (Exception ex) {
 		            return false;
 		        }
